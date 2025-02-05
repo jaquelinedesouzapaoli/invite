@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import html2canvas from 'html2canvas'; // Importando a biblioteca
+import html2canvas from 'html2canvas'; 
 
 function App() {
   const [background, setBackground] = useState('url(src/assets/background-1.webp)');
   const [selectedLink, setSelectedLink] = useState('src/assets/background-1.webp');
   
-  // Estados para os textos
   const [title, setTitle] = useState('Name Here');
   const [text1, setText1] = useState('Lorem Ipsum dolor sit amet, consectetur adipiscing!');
   const [preTitle, setPreTitle] = useState('Lorem Ipsum');
@@ -15,7 +14,6 @@ function App() {
   const [local, setLocal] = useState('Azambuja Church');
   const [obs, setObs] = useState('Note.: Lorem Ipsum dolor sit amet, consectetur adipiscing!');
 
-  // Estados para as cores dos textos
   const [titleColor, setTitleColor] = useState('black');
   const [text1Color, setText1Color] = useState('black');
   const [preTitleColor, setPreTitleColor] = useState('black');
@@ -23,7 +21,6 @@ function App() {
   const [localColor, setLocalColor] = useState('black');
   const [obsColor, setObsColor] = useState('black');
 
-  // Estados para os novos valores dos textos
   const [newTitle, setNewTitle] = useState('');
   const [newText1, setNewText1] = useState('');
   const [newPreTitle, setNewPreTitle] = useState('');
@@ -31,13 +28,11 @@ function App() {
   const [newLocation, setNewLocation] = useState('');
   const [newObs, setNewObs] = useState('');
 
-  // Função para alterar o valor do background
   const changeBackground = (image) => {
     setBackground(`url(${image})`);
     setSelectedLink(image);
   };
 
-  // Funções para lidar com as mudanças de texto
   const handleTitleChange = (event) => setNewTitle(event.target.value);
   const handleText1Change = (event) => setNewText1(event.target.value);
   const handlePreTitleChange = (event) => setNewPreTitle(event.target.value);
@@ -45,7 +40,6 @@ function App() {
   const handleLocalChange = (event) => setNewLocation(event.target.value);
   const handleObsChange = (event) => setNewObs(event.target.value);
 
-  // Funções para lidar com a mudança de cor de cada texto
   const handleTitleColorChange = (event) => setTitleColor(event.target.value);
   const handleText1ColorChange = (event) => setText1Color(event.target.value);
   const handlePreTitleColorChange = (event) => setPreTitleColor(event.target.value);
@@ -53,7 +47,6 @@ function App() {
   const handleLocalColorChange = (event) => setLocalColor(event.target.value);
   const handleObsColorChange = (event) => setObsColor(event.target.value);
 
-  // Função para atualizar todos os campos
   const handleSubmit = (event) => {
     event.preventDefault();
     if (newTitle.trim() !== '') setTitle(newTitle);
@@ -63,7 +56,6 @@ function App() {
     if (newLocation.trim() !== '') setLocal(newLocation);
     if (newObs.trim() !== '') setObs(newObs);
     
-    // Limpar os campos de entrada
     setNewTitle('');
     setNewText1('');
     setNewPreTitle('');
@@ -72,15 +64,14 @@ function App() {
     setNewObs('');
   };
 
-  // Função para capturar a div como imagem
   const downloadImage = () => {
-    const element = document.querySelector('.invite'); // Seleciona a div
+    const element = document.querySelector('.invite'); 
     html2canvas(element).then((canvas) => {
-      const image = canvas.toDataURL('image/png'); // Converte para imagem PNG
-      const link = document.createElement('a'); // Cria um link para download
+      const image = canvas.toDataURL('image/png'); 
+      const link = document.createElement('a'); 
       link.href = image;
-      link.download = 'invite.png'; // Nome do arquivo
-      link.click(); // Dispara o download
+      link.download = 'invite.png'; 
+      link.click();
     });
   };
 
@@ -133,7 +124,7 @@ function App() {
         </div>
         <div className='col-xl-4 col-lg-12 col-md-12 col-sm-12'>
           <form onSubmit={handleSubmit}>
-            {/* Bloco de entrada para texto e cor */}
+            {}
             <div className="form-group">
               <input 
                 id="text1Input" 
