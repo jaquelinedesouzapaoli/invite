@@ -1,8 +1,34 @@
-# React + Vite
+# 🎉 Invite - Simple Invitation Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Invite is a simple project that allows users to create customized invitations. The application allows you to modify text, select an image, and choose the color for each text element, creating personalized and visually appealing invitations.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used  
+- HTML5  
+- CSS3  
+- JavaScript
+- React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎬 Preview  
+
+## 📦 How to Use  
+
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/yourusername/invite.git
+
+2. Navigate to the project folder:
+   ```bash
+    cd invite
+3. Install the dependencies:
+    ```bash
+     npm install
+4. Run the project locally:
+    ```bash
+     npm run dev
+
+5. Open your browser and go to http://localhost:3000 (or the URL provided in the terminal) to start creating your invitations!
+
+## 🛠️ Features
+- Change invitation text
+- Choose background image
+- Select custom text colors
